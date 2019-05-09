@@ -38,7 +38,7 @@ class KitaTestUITests: XCTestCase {
         app.textFields["multiply_y_field"].tap()
         app.textFields["prime_field"].tap()
         app.textFields["fib_field"].tap()
-        app/*@START_MENU_TOKEN@*/.staticTexts["result_label"]/*[[".staticTexts[\"...\"]",".staticTexts[\"result_label\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.staticTexts["result_label"].tap()
 
         app.buttons["sum_button"].tap()
         app.buttons["multiply_button"].tap()
