@@ -9,7 +9,7 @@
 import XCTest
 
 class KitaTestUITests: XCTestCase {
-
+    var app: XCUIApplication!
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
@@ -17,7 +17,8 @@ class KitaTestUITests: XCTestCase {
         continueAfterFailure = false
 
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+        app = XCUIApplication()
+        app.launch()
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -29,6 +30,22 @@ class KitaTestUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        app.textFields["sum_x_field"].tap()
+        app.textFields["sum_y_field"].tap()
+        app.textFields["multiply_x_field"].tap()
+        app.textFields["multiply_y_field"].tap()
+        app.textFields["prime_field"].tap()
+        app.textFields["fib_field"].tap()
+        app/*@START_MENU_TOKEN@*/.staticTexts["result_label"]/*[[".staticTexts[\"...\"]",".staticTexts[\"result_label\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+
+        app.buttons["sum_button"].tap()
+        app.buttons["multiply_button"].tap()
+        app.buttons["prime_button"].tap()
+        app.buttons["fibbonacci_button"].tap()
+        
+        
     }
 
 }
